@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>One arm bandit</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <section class="statistic sticky-top">
+        <div class="container">
+            <div class="row statistic-height">
+                <div class="col text-center text-white d-flex align-items-center justify-content-center">
+                    <p class="lead pr-4 pt-1">Rozegrane gry: <span class="gameNumber">0</span></p>
+                    <p class="lead pr-4 pt-1">Wygrane gry: <span class="winNumber colorGreen">0</span></p>
+                    <p class="lead pt-1">Przegrane gry: <span class="loseNumber colorRed">0</span></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="title">
+        <div class="container mt-3">
+            <div class="row title-height align-items-center">
+                <div class="col text-center">
+                    <h1 class="text-uppercase mt-2">Jednoręki bandyta</h1>
+                    <p class="lead removeMargin">Kręć i zgarniaj pieniądze</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="game">
+        <div class="container mt-3">
+            <div class="row">
+                <div class="col d-flex align-items-center justify-content-center">
+                    <div class="gameItem"></div>
+                    <div class="gameItem"></div>
+                    <div class="gameItem"></div>
+                    <div class="gameItem"></div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col d-flex align-items-center justify-content-center">
+                    <div class="gameItem"></div>
+                    <div class="gameItem"></div>
+                    <div class="gameItem"></div>
+                    <div class="gameItem"></div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col d-flex align-items-center justify-content-center">
+                    <div class="gameItem"></div>
+                    <div class="gameItem"></div>
+                    <div class="gameItem"></div>
+                    <div class="gameItem"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-section">
+            <p class="show-info">?</p>
+        </div>
+
+        <div class="game-info">
+            <button class="close-game-info">x</button>
+            <h2>Gra typu jednoręki bandyta</h2>
+            <p>Po rozpoczęciu gry "maszyna" automatycznie dobiera koloru do pól. Gracz zwycięża, gdy po prostej lub skosie pojawią się 3 lub 4 takie same kolory.</p>
+            <p class="game-info-green">Nagrody: 3 kolory w rzędzie - stawka * 2 <br> 4 kolory w rzędzie - rozbity bank! Stawka * 100</p>
+            <p><b>Jest to wersja BETA, która być może w przyszłości zostanie rozwinięta. Wygrane nie sumują się! W wersji beta liczymy tylko jeden rząd!</b></p>
+        </div>
+    </section>
+
+    <section class="cashinfo">
+        <div class="container mt-3">
+            <div class="row">
+                <div class="col-md-8 d-flex align-items-center justify-content-center">
+                    <input type="number" class="bid form-control w-25 mx-2" placeholder="Podaj stawkę">
+                    <button class="btn btn-success mx-2 btn15">X1.5</button>
+                    <button class="btn btn-success mx-2 btn2">X2</button>
+                    <button class="btn btn-success mx-2 btn05">1/2</button>
+                </div>
+                <div class="col-md-4">
+                    <button class="btn btn-danger btnstart">Zakręć!</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="gameResult">
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col text-center py-2 text-white">
+                    <p class="lead delMargin">Pozostałe środki: <span class="currentCash">0</span></p>
+                    <p class="lead delMargin">Ostatni spin: <span class="lastSpin">X</span></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="js/Wallet.js"></script>
+    <script src="js/GameInfo.js"></script>
+    <script src="js/Spin.js"></script>
+    <script src="js/Results.js"></script>
+    <script src="js/Game.js"></script>
+</body>
+</html>
